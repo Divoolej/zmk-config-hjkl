@@ -1,0 +1,6 @@
+if SHIELD_HJKL
+
+config ZMK_KEYBOARD_NAME
+	default "HJKL"
+
+endif
