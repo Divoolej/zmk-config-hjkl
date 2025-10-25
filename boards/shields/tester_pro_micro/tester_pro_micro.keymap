@@ -42,9 +42,6 @@ PIN_MACRO(pin24, <&kp N1 &kp N0 &kp N7>)
 
         default_layer {
             bindings = <&pin0
-                        &pin22
-                        &pin23
-                        &pin24
                         &pin1
                         &pin2
                         &pin3
@@ -61,7 +58,10 @@ PIN_MACRO(pin24, <&kp N1 &kp N0 &kp N7>)
                         &pin18
                         &pin19
                         &pin20
-                        &pin21>;
+                        &pin21
+                        &pin22
+                        &pin23
+                        &pin24>;
         };
     };
 };
