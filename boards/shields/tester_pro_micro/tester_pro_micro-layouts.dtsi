@@ -13,11 +13,11 @@
 
         pinout_map: pinout_positions {
             physical-layout = <&physical_layout0>;
-            positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17>;
+            positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20>;
         };
         inline_map: single_row_positions {
             physical-layout = <&physical_layout1>;
-            positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17>;
+            positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20>;
         };
     };
 
@@ -48,6 +48,9 @@
             , <&key_physical_attrs 100 100  600  600      0    0    0> // D19
             , <&key_physical_attrs 100 100  600  500      0    0    0> // D20
             , <&key_physical_attrs 100 100  600  400      0    0    0> // D21
+            , <&key_physical_attrs 100 100  300  900      0    0    0> // D22
+            , <&key_physical_attrs 100 100  400  900      0    0    0> // D23
+            , <&key_physical_attrs 100 100  500  900      0    0    0> // D24
             ;
     };
 
@@ -75,6 +78,9 @@
             , <&key_physical_attrs 100 100 1500    0      0    0    0>
             , <&key_physical_attrs 100 100 1600    0      0    0    0>
             , <&key_physical_attrs 100 100 1700    0      0    0    0>
+            , <&key_physical_attrs 100 100 1800    0      0    0    0>
+            , <&key_physical_attrs 100 100 1900    0      0    0    0>
+            , <&key_physical_attrs 100 100 2000    0      0    0    0>
             ;
     };
 };

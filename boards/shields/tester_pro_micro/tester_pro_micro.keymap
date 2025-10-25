@@ -32,6 +32,9 @@ PIN_MACRO(pin18, <&kp N1 &kp N8>)
 PIN_MACRO(pin19, <&kp N1 &kp N9>)
 PIN_MACRO(pin20, <&kp N2 &kp N0>)
 PIN_MACRO(pin21, <&kp N2 &kp N1>)
+PIN_MACRO(pin22, <&kp N2 &kp N2>)
+PIN_MACRO(pin23, <&kp N2 &kp N3>)
+PIN_MACRO(pin24, <&kp N2 &kp N4>)
 
 / {
     keymap {
@@ -55,7 +58,10 @@ PIN_MACRO(pin21, <&kp N2 &kp N1>)
                         &pin18
                         &pin19
                         &pin20
-                        &pin21>;
+                        &pin21
+                        &pin22
+                        &pin23
+                        &pin24>;
         };
     };
 };
