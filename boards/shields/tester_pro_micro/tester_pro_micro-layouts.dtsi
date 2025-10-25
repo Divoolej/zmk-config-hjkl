@@ -7,27 +7,8 @@
 #include <physical_layouts.dtsi>
 
 / {
-    tester_position_map {
-        compatible = "zmk,physical-layout-position-map";
-        complete;
-
-        pinout_map: pinout_positions {
-            physical-layout = <&physical_layout0>;
-            positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20>;
-        };
-        inline_map: single_row_positions {
-            physical-layout = <&physical_layout1>;
-            positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20>;
-        };
-    };
-
     physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "Pro Micro Pinout";
-    };
-
-    physical_layout1: physical_layout_1 {
-        compatible = "zmk,physical-layout";
-        display-name = "Single Row";
     };
 };
