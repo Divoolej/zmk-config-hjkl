@@ -1,7 +1,7 @@
 if SHIELD_TESTER_PRO_MICRO
 
 config ZMK_KEYBOARD_NAME
-    default "ZMK Tester"
+    default "Foo"
 
 config ZMK_BLE
     def_bool n
