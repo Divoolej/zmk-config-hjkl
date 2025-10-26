@@ -1,4 +1,4 @@
-if SHIELD_TESTER_PRO_MICRO
+if SHIELD_TESTER_FOO
 
 config ZMK_KEYBOARD_NAME
     default "Foo"
