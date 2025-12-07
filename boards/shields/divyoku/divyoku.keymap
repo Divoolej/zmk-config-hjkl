@@ -9,11 +9,11 @@
 
         default_layer {
             bindings = <
-                &bt BT_PRV    &bt BT_NXT   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1   &kp Y   &kp U   &kp I     &kp O      &kp P
-                &out OUT_USB  &out OUT_BLE &kp D      &kp F        &kp G          &kp H   &kp J   &kp K     &kp L      &kp SEMI
-                &kp Z         &kp X        &kp C      &kp V        &kp B          &kp N   &kp M   &kp COMMA &kp PERIOD &kp SLASH
+                &bt BT_PRV    &bt BT_NXT   &bt BT_CLR     &bt BT_SEL 0 &bt BT_SEL 1        &kp Y         &kp U   &kp I     &kp O      &kp P
+                &out OUT_USB  &out OUT_BLE &bt BT_CLR_ALL &kp F        &kp G               &kp H         &kp J   &kp K     &kp L      &kp SEMI
+                &sys_reset    &kp X        &kp C          &kp V        &bootloader         &bootloader   &kp M   &kp COMMA &kp PERIOD &sys_reset
                               &kp N0
-                              &kp N1       &kp N2     &kp N3                      &kp N4  &kp N5  &kp N6
+                              &kp N1       &kp N2         &kp N3                           &kp N4        &kp N5  &kp N6
             >;
         };
     };
