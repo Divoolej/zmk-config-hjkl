@@ -1,5 +1,5 @@
 config SHIELD_DIVYOKU_LEFT
-    def_bool $(shields_list_contains, divyoku_left)
+    def_bool $(shields_list_contains,divyoku_left)
 
 config SHIELD_DIVYOKU_RIGHT
-    def_bool $(shields_list_contains, divyoku_right)
+    def_bool $(shields_list_contains,divyoku_right)
