@@ -1,0 +1,11 @@
+file_format: "1"
+id: divyoku
+name: divyoku
+type: shield
+url: https://github.com/divoolej/zmk-config-divyoku
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - divyoku_left
+  - divyoku_right

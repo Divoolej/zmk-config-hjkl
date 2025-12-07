@@ -20,4 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: tester_foo
+    shield: divyoku_left
+  - board: nice_nano_v2
+    shield: divyoku_right
