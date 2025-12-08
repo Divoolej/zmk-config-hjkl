@@ -1,2 +1,0 @@
-config SHIELD_HJKL
-	def_bool $(shields_list_contains, hjkl)

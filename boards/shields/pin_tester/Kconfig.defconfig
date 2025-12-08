@@ -1,7 +1,7 @@
-if SHIELD_TESTER_FOO
+if SHIELD_PIN_TESTER
 
 config ZMK_KEYBOARD_NAME
-    default "Foo"
+    default "Pin Tester"
 
 config ZMK_BLE
     def_bool n

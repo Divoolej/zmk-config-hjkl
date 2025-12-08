@@ -20,6 +20,8 @@
 ---
 include:
   - board: nice_nano_v2
+    shield: pin_tester
+  - board: nice_nano_v2
     shield: divyoku_left
   - board: nice_nano_v2
     shield: divyoku_right

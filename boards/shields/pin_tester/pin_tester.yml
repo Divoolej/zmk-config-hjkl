@@ -1,6 +1,6 @@
 file_format: "1"
-id: foo
-name: Foo
+id: pin_tester
+name: Pin Tester
 type: shield
 url: https://zmk.dev/docs/troubleshooting/hardware-issues
 requires: [pro_micro]
