@@ -1,13 +1,16 @@
 if SHIELD_DIVYOKU_LEFT
-  config ZMK_KEYBOARD_NAME
-      default "divyoku"
+    config ZMK_KEYBOARD_NAME
+        default "divyoku"
 
-  config ZMK_SPLIT_ROLE_CENTRAL
-      default y
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
 endif
 
 
 if SHIELD_DIVYOKU_LEFT || SHIELD_DIVYOKU_RIGHT
-  config ZMK_SPLIT
-      default y
+    config ZMK_BLE
+        default y
+        
+    config ZMK_SPLIT
+        default y
 endif
