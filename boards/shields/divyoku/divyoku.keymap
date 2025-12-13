@@ -13,7 +13,7 @@
                 &out OUT_USB  &out OUT_BLE &bt BT_CLR_ALL &kp F        &kp G               &kp H         &kp J   &kp K     &kp L      &kp SEMI
                 &sys_reset    &kp X        &kp C          &kp V        &bootloader         &bootloader   &kp M   &kp COMMA &kp PERIOD &sys_reset
                               &kp N0
-                              &kp N1       &kp N2         &kp N3                           &kp N4        &kp N5  &kp N6
+                              &kp N1   &kp N2         &kp N3                           &kp N4        &kp N5  &kp N6
             >;
         };
     };

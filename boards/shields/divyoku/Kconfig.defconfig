@@ -6,7 +6,6 @@ if SHIELD_DIVYOKU_LEFT
         default y
 endif
 
-
 if SHIELD_DIVYOKU_LEFT || SHIELD_DIVYOKU_RIGHT
     config ZMK_BLE
         default y
