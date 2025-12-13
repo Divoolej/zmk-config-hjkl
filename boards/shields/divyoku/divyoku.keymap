@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
-#defined SYS 1
+#define SYS 1
 
 / {
     keymap {
@@ -30,6 +30,6 @@
                                               &none
                                               &kp ESC        &kp SPACE      &kp TAB                  &kp ENTER      &kp BSPC       &kp DEL
             >;
-        }
+        };
     };
 };
