@@ -2,33 +2,319 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
-#define BASE 0
-#define SYS 1
+#define L_BASE 0
+#define L_SYM 1
+#define L_NUM 2
+#define L_2HG 3
+#define L_1HGB 4
+#define L_1HGE 5
+#define L_MOUS 6
+#define L_SWCH 7
+#define L_SYS 8
 
 / {
+    behaviors {
+        // Homerow Mods' configuration values correspond to Sunaku's "Level 3" preset.
+        // Taken from: https://docs.google.com/spreadsheets/d/1ESgObQelyz4lnKlfwLYsmofLJulOMK5RdGBsopLe2o8/edit?gid=447112099#gid=447112099
+
+        hmlp: home_row_mods_left_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <430>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <
+                5  6  7  8  9
+                15 16 17 18 19
+                25 26 27 28 29
+
+                34 35 36
+            >
+        };
+
+        hmrp: home_row_mods_right_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <430>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <
+                0  1  2  3  4
+                10 11 12 13 14
+                20 21 22 23 24
+                      30
+                      31 32 33
+            >
+        };
+
+        hmlr: home_row_mods_left_ring {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <390>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <
+                5  6  7  8  9
+                15 16 17 18 19
+                25 26 27 28 29
+
+                34 35 36
+            >
+        };
+
+        hmrr: home_row_mods_right_ring {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <390>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <
+                0  1  2  3  4
+                10 11 12 13 14
+                20 21 22 23 24
+                      30
+                      31 32 33
+            >
+        };
+
+        hmlm: home_row_mods_left_middle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <360>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <
+                5  6  7  8  9
+                15 16 17 18 19
+                25 26 27 28 29
+
+                34 35 36
+            >
+        };
+
+        hmrm: home_row_mods_right_middle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <360>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <300>;
+            hold-trigger-key-positions = <
+                0  1  2  3  4
+                10 11 12 13 14
+                20 21 22 23 24
+                      30
+                      31 32 33
+            >
+        };
+
+        hmli: home_row_mods_left_index {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <340>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <250>;
+            hold-trigger-key-positions = <
+                5  6  7  8  9
+                15 16 17 18 19
+                25 26 27 28 29
+
+                34 35 36
+            >
+        };
+
+        hmri: home_row_mods_right_index {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+            tapping-term-ms = <340>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <250>;
+            hold-trigger-key-positions = <
+                0  1  2  3  4
+                10 11 12 13 14
+                20 21 22 23 24
+                      30
+                      31 32 33
+            >
+        };
+
+        lt: layer_tap_left_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <250>;
+            retro-tap;
+            hold-trigger-key-positions = <
+               1  2  3  4          5  6  7  8  9
+            10 11 12 13 14         15 16 17 18 19
+                  22               25 26 27 28 29
+
+                                   34 35 36
+            >;
+        }
+
+        rt: layer_tap_right_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "balanced";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <300>;
+            require-prior-idle-ms = <250>;
+            hold-trigger-key-positions = <
+                0  1  2  3  4            7  8
+                10 11 12 13 14     15 16 17 18 19
+                20 21 22 23 24
+                      30
+                      31 32 33
+            >
+        }
+
+        lp: layer_tap_left_pinky {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1000>;
+            quick-tap-ms = <450>;
+            require-prior-idle-ms = <1000>;
+            hold-trigger-key-positions = <
+                0  1  2  3  4                  9
+                10                             19
+                   21 22 23 24                 29
+                      30
+            >
+            retro-tap;
+        }
+    }
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-                &kp Q          &kp W          &kp F          &kp P          &kp B                    &kp J          &kp L          &kp U          &kp Y          &kp APOS
-                &kp A          &kp R          &kp S          &kp T          &kp G                    &kp M          &kp N          &kp E          &kp I          &kp O
-                &kp Z          &kp X          &kp C          &kp D          &kp V                    &kp K          &kp H          &kp COMMA      &kp DOT        &kp SLASH
-                                              &mo SYS
-                                              &kp ESC        &kp SPACE      &kp TAB                  &kp ENTER      &kp BSPC       &kp DEL
+                &caps_word      &kp C           &kp Y           &kp F           &kp K                    &kp Z           &kp L           &kp ENTER       &kp U           &kp SEMICOLON
+                &hmlp LCTRL R   &hmlr RALT S    &hmlm LGUI T    &hmli LSHIFT H  &kp D                    &kp M           &hmri RSHIFT N  &hmrm RGUI A    &hmrr RALT I    &hmrp RCTRL O
+                &lp L_SYS X     &kp V           &kp G           &kp P           &kp B                    &kp J           &kp W           &kp COMMA       &kp DOT         &lt L_SWCH Q
+                                                &kp SLASH
+                                                &lt L_SWCH ESC  &lt L_NUM E     &kp TAB                  &kp BACKSPACE   &rt L_SYM SPACE &kp APOSTROPHE
             >;
         };
+
+        symbols_layer {
+            display-name = "Symbols";
+            bindings = <
+                &kp HASH        &kp GRAVE       &kp EQUAL       &kp ASTERISK    &kp PERCENT              &none           &none           &kp ENTER       &kp BACKSPACE   &none
+                &kp CARET       &kp MINUS       &kp LBKT        &kp RBKT        &kp DOLLAR               &kp BACKSPACE   &mt RSHIFT LEFT &mt RGUI DOWN   &mt RALT UP     &mt RCTRL RIGHT
+                &kp EXCLAMATION &kp AMPERSAND   &kp LPAR        &kp RPAR        &kp BACKSLASH            &none           &none           &none           &none           &none
+                                                &kp SLASH
+                                                &kp ESC         &kp SPACE       &kp TAB                  &none           &none           &none
+            >;
+        }
+
+        numbers_layer {
+            display-name = "Numbers";
+            bindings = <
+                &none           &kp KP_LPAR     &kp KP_ENTER    &kp KP_RPAR     &kp KP_DOT               &kp TAB         &kp N7          &kp N8          &kp N9          &kp KP_COMMA
+                &kp LCTRL       &mt RALT LEFT   &mt LGUI UP     &mt LSHFT RIGHT &kp KP_EQUAL             &kp KP_PLUS     &kp N4          &kp N5          &kp N6          &kp KP_MINUS
+                &none           &none           &kp DOWN        &none           &none                    &kp KP_MULTIPLY &kp N1          &kp N2          &kp N3          &kp KP_DIVIDE
+                                                &none
+                                                &none           &none           &none                    &kp BACKSPACE   &kp SPACE       &kp N0
+            >;
+        }
+
+        two_handed_game_layer {
+            display-name = "Two Handed Games";
+            bindings = <
+                &kp T           &kp Q           &kp X           &kp E           &kp R                    &kp Y           &kp U           &kp I           &kp O           &kp P
+                &lt L_MOUS G    &kp A           &kp W           &kp D           &kp F                    &kp H           &kp J           &kp K           &kp L           &kp SEMICOLON
+                &lp L_SYS B     &kp Z           &kp S           &kp C           &kp V                    &kp N           &kp M           &kp COMMA       &kp DOT         &lt L_SWCH SLASH
+                                                &kp SLASH
+                                                &mt LSHIFT N0   &mt LGUI BSPC   &mt LCTRL TAB            &mt LSHIFT N0   &mt LCTRL SPACE &lt L_SWCH N1
+            >;
+        }
+
+        one_handed_game_layer_base {
+            display-name = "One Handed Games (Base)";
+            bindings = <
+                &lt L_1HGE TAB  &kp Q           &kp X           &kp E           &kp T                    &none           &none           &none           &none           &none
+                &kp LSHIFT      &kp A           &kp W           &kp D           &kp F                    &none           &none           &none           &none           &none
+                &lp L_SYS LCTRL &kp Z           &kp S           &kp C           &kp V                    &none           &none           &none           &none           &lt L_SWCH SLASH
+                                                &kp ESC
+                                                &kp R           &kp SPACE       &kp LALT                 &none           &none           &none
+            >;
+        }
+
+        one_handed_game_layer_extra {
+            display-name = "One Handed Games (Extra)";
+            bindings = <
+                &none           &kp N1          &kp N2          &kp N3          &kp N4                   &none           &none           &none           &none           &none
+                &none           &none           &none           &none           &kp N5                   &none           &none           &none           &none           &none
+                &none           &kp F1          &none           &kp F2          &kp N6                   &none           &none           &none           &none           &none
+                                                &kp F3
+                                                &kp G           &kp B           &kp M                    &none           &none           &none
+            >;
+        }
+
+        mouse_layer {
+            display-name = "Mouse";
+            bindings = <
+                &none           &none           &none           &none           &none                    &none           &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT &none
+                &none           &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT &none                    &mkp MB4        &mkp LCLK       &mkp MCLK       &mkp RCLK       &mkp MB5
+                &none           &none           &mmv MOVE_DOWN  &none           &none                    &none           &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT &none
+                                                &none
+                                                &none           &none           &none                    &none           &none           &none
+            >;
+        }
+
+        switcher_layer {
+            display-name = "Layer Switcher";
+            bindings = <
+                &none           &none           &none           &none           &none                    &to L_BASE      &none           &to L_BASE      &none           &none
+                &none           &none           &none           &none           &none                    &to L_2HG       &none           &none           &none           &none
+                &none           &none           &none           &none           &none                    &to L_1HGB      &none           &none           &none           &none
+                                                &none
+                                                &none           &none           &none                    &none           &none           &none
+            >;
+        }
 
         system_layer {
             display-name = "System";
             bindings = <
-                &bt BT_SEL 0   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR_ALL                 &none          &none          &none          &none          &none
-                &none          &none          &none          &none          &none                    &none          &none          &none          &none          &none
-                &sys_reset     &none          &none          &none          &bootloader              &bootloader    &none          &none          &none          &sys_reset
-                                              &none
-                                              &kp ESC        &kp SPACE      &kp TAB                  &kp ENTER      &kp BSPC       &kp DEL
+                &bootloader     &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3            &none           &none           &none           &none           &bootloader
+                &sys_reset      &none           &none           &none           &none                    &none           &none           &none           &none           &sys_reset
+                &none           &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3             &none           &none           &none           &none           &bt BT_CLR_ALL
+                                                &bt BT_CLR
+                                                &none           &none           &none                    &none           &none           &none
             >;
         };
     };
