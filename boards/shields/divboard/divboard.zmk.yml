@@ -1,0 +1,11 @@
+file_format: "1"
+id: divboard
+name: divboard
+type: shield
+url: https://github.com/divoolej/zmk-config
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - divboard_left
+  - divboard_right

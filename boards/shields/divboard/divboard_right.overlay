@@ -1,7 +1,7 @@
-#include "divyoku.dtsi"
+#include "divboard.dtsi"
 
 &default_transform {
-  col-offset = <19>;
+    col-offset = <19>;
 };
 
 / {

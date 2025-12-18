@@ -1,12 +1,12 @@
-if SHIELD_DIVYOKU_LEFT
+if SHIELD_DIVBOARD_LEFT
     config ZMK_KEYBOARD_NAME
-        default "divyoku"
+        default "DivBoard"
 
     config ZMK_SPLIT_ROLE_CENTRAL
         default y
 endif
 
-if SHIELD_DIVYOKU_LEFT || SHIELD_DIVYOKU_RIGHT
+if SHIELD_DIVBOARD_LEFT || SHIELD_DIVBOARD_RIGHT
     config ZMK_BLE
         default y
         

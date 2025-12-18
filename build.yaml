@@ -2,8 +2,8 @@ include:
   - board: nice_nano@2.0.0
     shield: pin_tester
   - board: nice_nano@2.0.0
-    shield: divyoku_left
+    shield: divboard_left
   - board: nice_nano@2.0.0
-    shield: divyoku_right
+    shield: divboard_right
   - board: nice_nano@2.0.0
     shield: settings_reset
