@@ -12,4 +12,7 @@ if SHIELD_DIVBOARD_LEFT || SHIELD_DIVBOARD_RIGHT
         
     config ZMK_SPLIT
         default y
+
+    config ZMK_POINTING
+        default y
 endif
