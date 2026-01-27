@@ -2,8 +2,17 @@ if SHIELD_DIVBOARD_LEFT
     config ZMK_KEYBOARD_NAME
         default "DivBoard"
 
+    config USB_DEVICE_MANUFACTURER
+        default "Divoolej"
+
     config ZMK_SPLIT_ROLE_CENTRAL
         default y
+
+    config BT_MAX_CONN
+        default 6
+
+    config BT_MAX_PAIRED
+        default 6
 endif
 
 if SHIELD_DIVBOARD_LEFT || SHIELD_DIVBOARD_RIGHT
