@@ -202,9 +202,9 @@
         default_layer {
             display-name = "Base";
             bindings = <
-                &kp V            &kp C            &kp Y            &kp W            &kp K                               &kp Z            &kp L            &kp ENTER        &kp U            &kp SEMICOLON
-                &hmlp LCTRL R    &hmlr RALT S     &hmlm LGUI T     &hmli LSHIFT H   &kp D                               &kp M            &hmri RSHIFT N   &hmrm RGUI A     &hmrr RALT I     &hmrp RCTRL O
-                &kp Q            &kp X            &kp G            &kp P            &kp B                               &kp J            &kp F            &kp COMMA        &kp DOT          &caps_word
+                &kp V            &kp C            &kp Y            &kp F            &kp K                               &kp Z            &kp L            &kp ENTER        &kp U            &kp Q
+                &hmlp LCTRL R    &hmlr RALT S     &hmlm LGUI T     &hmli LSHIFT H   &hmli LGUI D                        &kp M            &hmri RSHIFT N   &hmrm RGUI A     &hmrr RALT I     &hmrp RCTRL O
+                &kp X            &kp SEMICOLON    &kp G            &kp P            &kp B                               &kp J            &kp W            &kp COMMA        &kp DOT          &caps_word
                                                   &mo L_SYS
                                                   &tl L_SHOR ESC   &tl L_NUM E      &tl L_NAV TAB                       &tr L_MOUS BSPC  &tr L_SYM SPACE  &tr L_SWCH APOSTROPHE
             >;
@@ -235,8 +235,8 @@
         shortcuts_layer {
             display-name = "Shortcuts";
             bindings = <
-                &trans           &trans           &kp LG(LS(Z))    &kp LG(N)        &trans                              &none            &none            &none            &none            &none
-                &kp LG(A)        &trans           &kp LG(Z)        &trans           &trans                              &none            &none            &none            &none            &none 
+                &trans           &kp LG(Q)        &kp LG(W)        &kp LG(N)        &trans                              &none            &none            &none            &none            &none
+                &kp LG(A)        &trans           &kp LG(Z)        &kp LG(LS(Z))    &trans                              &none            &none            &none            &none            &none 
                 &kp C_PREV       &kp C_VOL_DN     &kp C_PLAY_PAUSE &kp C_VOL_UP     &kp C_NEXT                          &none            &none            &none            &none            &none 
                                                   &none
                                                   &none            &none            &none                               &none            &none            &none
